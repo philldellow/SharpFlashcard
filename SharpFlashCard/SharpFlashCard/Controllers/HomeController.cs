@@ -9,24 +9,24 @@ namespace SharpFlashCard.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string answer = "")
         {
             GameRules gamerules = new GameRules();
             return View(gamerules);
         }
 
-        public ActionResult Check([Bind(Include = "Question,Answer")] FlashCards card)
-        {
-            if (ModelState.IsValid)
-            {
+        //public ActionResult Check([Bind(Include = "Question,Answer")] FlashCards card)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
                 
-                //db.Posts.Add(post);
-                //db.SaveChanges();
-                //return RedirectToAction("Index");
-            }
+        //        //db.Posts.Add(post);
+        //        //db.SaveChanges();
+        //        //return RedirectToAction("Index");
+        //    }
 
-            return View("Index");
-        }
+        //    return View("Index");
+        //}
 
         //public ActionResult About()
         //{
