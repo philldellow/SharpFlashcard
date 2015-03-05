@@ -11,7 +11,7 @@ namespace SharpFlashCard.Models
         public List<FlashCards> ReadFile()
         {
             List<FlashCards> _FlashCard = new List<FlashCards>();
-            using (StreamReader reader = new StreamReader("SharpFlashCard/BootStrapData/Q&A.txt"))
+            using (StreamReader reader = new StreamReader("SharpFlashcard/SharpFlashCard/SharpFlashCard/BootStrapData/Q&A.txt"))
             {
                 while (!reader.EndOfStream)
                 {
