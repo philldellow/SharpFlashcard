@@ -11,8 +11,9 @@ namespace SharpFlashCard.Models
         public FlashCards RandomCardPick()
         {
             List<FlashCards> _FlashCard = new List<FlashCards>();
-            int r = rnd.Next(1, 39);
-            return _FlashCard[r];
+            _FlashCard.Add( new FlashCards());
+            //int r = rnd.Next(1, 38);
+            return _FlashCard[0];
         }
     }
 }

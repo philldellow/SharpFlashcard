@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SharpFlashCard.Models;
 
 namespace SharpFlashCard.Controllers
 {
@@ -10,7 +11,8 @@ namespace SharpFlashCard.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            GameRules gamerules = new GameRules();
+            return View(gamerules);
         }
 
         public ActionResult About()
