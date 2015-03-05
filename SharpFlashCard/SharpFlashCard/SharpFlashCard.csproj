@@ -180,9 +180,9 @@
     <Compile Include="Migrations\201503042249067_init.Designer.cs">
       <DependentUpon>201503042249067_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503042250303_Flash_cards.cs" />
-    <Compile Include="Migrations\201503042250303_Flash_cards.Designer.cs">
-      <DependentUpon>201503042250303_Flash_cards.cs</DependentUpon>
+    <Compile Include="Migrations\201503050217451_addedTextFile.cs" />
+    <Compile Include="Migrations\201503050217451_addedTextFile.Designer.cs">
+      <DependentUpon>201503050217451_addedTextFile.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -194,6 +194,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BootStrapData\Q&amp;A.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -264,8 +267,8 @@
     <EmbeddedResource Include="Migrations\201503042249067_init.resx">
       <DependentUpon>201503042249067_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503042250303_Flash_cards.resx">
-      <DependentUpon>201503042250303_Flash_cards.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503050217451_addedTextFile.resx">
+      <DependentUpon>201503050217451_addedTextFile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

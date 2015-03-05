@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using SharpFlashCard.Models;
+
 namespace SharpFlashCard.Migrations
 {
     using System;
@@ -16,16 +19,18 @@ namespace SharpFlashCard.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
+            GameLogic gameLogic = new GameLogic();
+
+            List<FlashCards> flashCards = gameLogic.ReadFile();
+
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+
+            context.Cards.AddOrUpdate(
+                  p => p.Question,
+                    flashCards.ToArray()
+                );
+
         }
     }
 }

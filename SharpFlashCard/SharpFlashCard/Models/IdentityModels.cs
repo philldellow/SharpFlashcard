@@ -25,6 +25,8 @@ namespace SharpFlashCard.Models
         {
         }
 
+        public DbSet<FlashCards> Cards { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
