@@ -7,33 +7,35 @@ namespace SharpFlashCard.Models
 {
     public class GameRules
     {
-        ApplicationDbContext context = new ApplicationDbContext();
-        List<FlashCards> _RoundCards = new List<FlashCards>();
-        FlashCards Card;
-        Random rnd = new Random();
+                //public bool IsCorrect
+        //{
+        //    get { return answer == cardAnswer; }
+        //}
+        GetQA getQA = new GetQA();
 
-            public FlashCards RandomCardPick()
-            {
-                List<FlashCards> Deck = context.Cards.Where(f => f.Id >= 0).ToList();
-                int QAindex = rnd.Next(0, Deck.Count());
+        public string answer;
+        public string cardAnswer;
+        public string question;
+        FlashCards card;
+        
 
-                Card = Deck.Where(f => f.Id == QAindex).First();
-
-                return Card;
-            }
-
-        public List<FlashCards> GetRound()
+        public GameRules(string A)
         {
-            List<FlashCards> Deck = context.Cards.Where(f => f.Id >= 0).ToList();
+            answer = A;
+        }
 
-            for (int i = 0; i < 5; i++)
-            {
-                int QAindex = rnd.Next(0, Deck.Count());
+        public string Response()
+        {
+            return answer == cardAnswer ? "Correct!!!" : "You got it Wrong :( ";
+        }
 
-                _RoundCards = Deck.Where(f => f.Id == QAindex).ToList();
-            }
-            return _RoundCards;
+        public void Card()
+        {
+            card = getQA.RandomCardPick();
+            cardAnswer = card.Answer;
+            question = card.Question;
         }
 
     }
+    
 }

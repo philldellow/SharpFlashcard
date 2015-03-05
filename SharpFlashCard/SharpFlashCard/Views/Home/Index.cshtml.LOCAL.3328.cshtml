@@ -1,0 +1,29 @@
+﻿@using SharpFlashCard.Models
+@model SharpFlashCard.Models.GameRules
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<form>
+    <div class="jumbotron">
+        <h1>CardSharpers</h1>
+        <p class="lead">Sharp.Flash.Cards - A Whole new way of learning</p>
+        <p>To play a round please answer the question below</p><br>
+        
+        <!--p><a href="http://asp.net" class="btn btn-primary btn-lg">New Card &raquo;</a></p-->
+    </div>
+</form>
+
+<div class="row">
+        <div class="col-md-4">
+    
+    <h3>Question:</h3>
+       @* <p>@Model.RandomCardPick().Question</p>*@
+        
+        <p><h3>Answer:</h3>
+            <textarea name="answer" cols="100" rows="1" maxlength="1000"></textarea>
+        </p><br>
+
+        <p><input type="submit" class="btn btn-primary btn-lg"></p><br>
+        </div>
+    </div>

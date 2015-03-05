@@ -190,10 +190,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Models\GameRules.cs" />
     <Compile Include="Models\FlashCards.cs" />
     <Compile Include="Models\GameLogic.cs" />
-    <Compile Include="Models\GameRules.cs" />
+    <Compile Include="Models\GetQA.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
