@@ -1,0 +1,41 @@
+A command that causes C# to do something.
+statement
+
+A statement that creates a variable used to store data.
+declaration statement
+
+A statement that performs calculations.
+expression statement
+
+A statement that executes other statements, based on particular conditions being met.
+if–then statement
+
+A statement that executes a group of statements one or more times.
+for, while or do statement
+
+One or more consecutive spaces, tabs or line breaks.
+white space
+
+A group of one or more statements that are enclosed in braces, beginning with a opening brace ({) and ending with a closing brace (}).
+block
+
+A word that you make up to refer to a C# programming element by name.
+identifier
+
+Text that provides explanations of your code.
+comment
+
+A comment that begins with the sequence // and ends at the end of the line.
+single–line comment
+
+A comment that spans multiple lines so it begins with the sequence /* and ends with the sequence */.
+delimited comment
+
+Code that defines the behavior of an object.
+class
+
+An instance of a class.
+object
+
+A variable that any method in a class can access.
+instance variable

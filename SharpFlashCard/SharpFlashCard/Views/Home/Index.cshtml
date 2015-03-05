@@ -4,21 +4,30 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>CardSharpers</h1>
-    <p class="lead">Sharp.Flash.Cards - A Whole new way of learning</p>
-    <h3>Question:</h3>
-    <p>@Model.GetRound()[0].Question</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">New Card &raquo;</a></p>
-</div>
+<form>
+    <div class="jumbotron">
+        <h1>CardSharpers</h1>
+        <p class="lead">Sharp.Flash.Cards - A Whole new way of learning</p>
+        <p>To play a round please answer the question below</p><br>
+        <h3>Question:</h3>
+        <p>@Model.RandomCardPick().Question</p>
+        <!--p>@Model.GetRound()[0].Question</p-->
+        <p><h3>Answer:</h3>
+            <textarea name="answer" cols="100" rows="1" maxlength="1000"></textarea>
+        </p><br>
+ 
+        <p><input type="submit" class="btn btn-primary btn-lg"></p><br>
+        <!--p><a href="http://asp.net" class="btn btn-primary btn-lg">New Card &raquo;</a></p-->
+    </div>
+</form>
 
 @*<div class="row">
-    <div class="col-md-4">
-        <h2>Card Number : </h2>
-        <p>
-            Card Question:
-        </p>
-    
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">see answer &raquo;</a></p>
-    </div>
-</div>*@
+        <div class="col-md-4">
+            <h2>Card Number : </h2>
+            <p>
+                Card Question:
+            </p>
+
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">see answer &raquo;</a></p>
+        </div>
+    </div>*@
