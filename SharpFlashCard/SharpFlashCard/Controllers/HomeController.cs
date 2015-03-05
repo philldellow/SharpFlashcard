@@ -11,15 +11,18 @@ namespace SharpFlashCard.Controllers
     {
         public ActionResult Index(string answer = "")
         {
-            GameRules gamerules = new GameRules();
-            return View(gamerules);
+            GameRules check = new GameRules(answer);
+            return View(check);
+
+            //GameRules gamerules = new GameRules();
+            //return View(gamerules);
         }
 
         //public ActionResult Check([Bind(Include = "Question,Answer")] FlashCards card)
         //{
         //    if (ModelState.IsValid)
         //    {
-                
+
         //        //db.Posts.Add(post);
         //        //db.SaveChanges();
         //        //return RedirectToAction("Index");
@@ -28,18 +31,18 @@ namespace SharpFlashCard.Controllers
         //    return View("Index");
         //}
 
-        //public ActionResult About()
-        //{
-        //    ViewBag.Message = "Your application description page.";
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
 
-        //    return View();
-        //}
+            return View();
+        }
 
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
 
-        //    return View();
-        //}
+            return View();
+        }
     }
 }
