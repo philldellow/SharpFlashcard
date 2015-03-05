@@ -21,15 +21,7 @@ namespace SharpFlashCard.Migrations
 
             GameLogic gameLogic = new GameLogic();
 
-            List<FlashCards> flashCards = gameLogic.ReadFile();
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-
-            context.Cards.AddOrUpdate(
-                  p => p.Question,
-                    flashCards.ToArray()
-                );
+            gameLogic.ReadFile();
 
         }
     }

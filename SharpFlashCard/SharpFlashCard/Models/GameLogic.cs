@@ -3,27 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.IO;
+using SharpFlashCard.Models;
 
 namespace SharpFlashCard.Models
 {
     public class GameLogic
     {
-        public List<FlashCards> ReadFile()
+        SharpFlashCard.Models.ApplicationDbContext context = new SharpFlashCard.Models.ApplicationDbContext();
+        int id = 0;
+
+        public void ReadFile()
         {
-            List<FlashCards> _FlashCard = new List<FlashCards>();
-            using (StreamReader reader = new StreamReader("SharpFlashcard/SharpFlashCard/SharpFlashCard/BootStrapData/Q&A.txt"))
+            using (StreamReader reader = new StreamReader("Q&A.txt"))
             {
                 while (!reader.EndOfStream)
                 {
-                    string answer = reader.ReadLine();
                     string question = reader.ReadLine();
+                    string answer = reader.ReadLine();
                     reader.ReadLine(); //read out blank line
+                    id++;
 
-                    _FlashCard.Add(new FlashCards(answer, question));
-                    
+                    context.Cards.Add(new FlashCards(id, question, answer));
                 }
+                context.SaveChanges();
             }
-            return _FlashCard;
         }
     }
 }

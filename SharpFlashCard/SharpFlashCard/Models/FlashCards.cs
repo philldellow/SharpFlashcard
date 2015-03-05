@@ -14,8 +14,9 @@ namespace SharpFlashCard.Models
 
         public FlashCards() { }
 
-        public FlashCards(string Question, string Answer)
+        public FlashCards(int Id, string Question, string Answer)
         {
+            this.Id = Id;
             this.Question = Question;
             this.Answer = Answer;
         }

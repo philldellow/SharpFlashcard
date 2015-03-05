@@ -180,9 +180,9 @@
     <Compile Include="Migrations\201503042249067_init.Designer.cs">
       <DependentUpon>201503042249067_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503050217451_addedTextFile.cs" />
-    <Compile Include="Migrations\201503050217451_addedTextFile.Designer.cs">
-      <DependentUpon>201503050217451_addedTextFile.cs</DependentUpon>
+    <Compile Include="Migrations\201503050750387_flashcard_table.cs" />
+    <Compile Include="Migrations\201503050750387_flashcard_table.Designer.cs">
+      <DependentUpon>201503050750387_flashcard_table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -273,8 +273,8 @@
     <EmbeddedResource Include="Migrations\201503042249067_init.resx">
       <DependentUpon>201503042249067_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503050217451_addedTextFile.resx">
-      <DependentUpon>201503050217451_addedTextFile.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201503050750387_flashcard_table.resx">
+      <DependentUpon>201503050750387_flashcard_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

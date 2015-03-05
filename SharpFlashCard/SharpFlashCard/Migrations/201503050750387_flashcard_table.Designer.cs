@@ -7,13 +7,13 @@ namespace SharpFlashCard.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.2-31219")]
-    public sealed partial class addedTextFile : IMigrationMetadata
+    public sealed partial class flashcard_table : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedTextFile));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(flashcard_table));
         
         string IMigrationMetadata.Id
         {
-            get { return "201503050217451_addedTextFile"; }
+            get { return "201503050750387_flashcard_table"; }
         }
         
         string IMigrationMetadata.Source
