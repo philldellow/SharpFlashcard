@@ -9,13 +9,15 @@ namespace SharpFlashCard.Models
 {
     public class GameLogic
     {
-        SharpFlashCard.Models.ApplicationDbContext context = new SharpFlashCard.Models.ApplicationDbContext();
-        int id = 0;
+        ApplicationDbContext context = new ApplicationDbContext();
+ 
 
         public void ReadFile()
         {
             using (StreamReader reader = new StreamReader("Q&A.txt"))
             {
+                int id = 0;
+
                 while (!reader.EndOfStream)
                 {
                     string question = reader.ReadLine();

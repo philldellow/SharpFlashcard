@@ -7,7 +7,8 @@
 <div class="jumbotron">
     <h1>CardSharpers</h1>
     <p class="lead">Sharp.Flash.Cards - A Whole new way of learning</p>
-    <p>_flashCards @(Model.RandomCardPick().Question)</p>
+    <h3>Question:</h3>
+    <p>@Model.GetRound()[0].Question</p>
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">New Card &raquo;</a></p>
 </div>
 
