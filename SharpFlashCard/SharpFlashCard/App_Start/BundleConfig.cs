@@ -21,12 +21,19 @@ namespace SharpFlashCard
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js" 
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/loaderAnimationScript.js"));
+                      "~/Content/introloader.css"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/Site").Include(
+                "~/Scripts/introloader.js",
+                "~/Scripts/loaderAnimationScript.js"
+                ));
         }
     }
 }

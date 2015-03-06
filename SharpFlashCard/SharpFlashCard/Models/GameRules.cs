@@ -7,10 +7,10 @@ namespace SharpFlashCard.Models
 {
     public class GameRules
     {
-                //public bool IsCorrect
-        //{
-        //    get { return answer == cardAnswer; }
-        //}
+        public bool IsCorrect
+        {
+            get { return answer == cardAnswer; }
+        }
         GetQA getQA = new GetQA();
 
         public string answer;
