@@ -184,10 +184,6 @@
     <Compile Include="Migrations\201503050750387_flashcard_table.Designer.cs">
       <DependentUpon>201503050750387_flashcard_table.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503050921579_csharp_flashcards.cs" />
-    <Compile Include="Migrations\201503050921579_csharp_flashcards.Designer.cs">
-      <DependentUpon>201503050921579_csharp_flashcards.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GameRules.cs" />
@@ -281,9 +277,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503050750387_flashcard_table.resx">
       <DependentUpon>201503050750387_flashcard_table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503050921579_csharp_flashcards.resx">
-      <DependentUpon>201503050921579_csharp_flashcards.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

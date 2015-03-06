@@ -14,7 +14,7 @@ namespace SharpFlashCard.Models
 
         public void ReadFile()
         {
-            using (StreamReader reader = new StreamReader("CSharpQ&A.txt"))
+            using (StreamReader reader = new StreamReader("SharpFlashCard/SharpFlashCard/SharpFlashCard/BootStrapData/Q&A.txt"))
             {
                 int id = 0;
 
