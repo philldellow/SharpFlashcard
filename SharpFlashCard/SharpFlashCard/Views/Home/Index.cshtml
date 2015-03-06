@@ -17,18 +17,19 @@
 <div class="row">
     <div class="col-md-6">
 
-        <h3>Question:</h3>
+        <h3>Question: @Model.Card()</h3>
         <p>@Model.question</p><br>
 
         @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { }))
         {
             <h3>Answer:</h3>
-            @Html.TextBox("Please Answer")<br>
-            <br/><p><input type="submit" class="btn btn-primary btn-lg"></p><br />
+            @Html.Hidden("cardAnswer", Model.cardAnswer)
+            @Html.TextBox("answer")<br>
+            <br /><input type="submit" class="btn btn-primary btn-lg"><br />
         }
         @if (Model != null)
         {
-            <p> Answer : <span id="Correct_Answer"> @Model.Response() </span></p>
+            <h3><span id="Correct_Answer"> @Model.Response </span></h3>
         }
     </div>
 </div>

@@ -9,9 +9,9 @@ namespace SharpFlashCard.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index(string answer = "")
+        public ActionResult Index(string answer = "", string cardAnswer = "")
         {
-            GameRules check = new GameRules(answer);
+            GameRules check = new GameRules(answer, cardAnswer);
             return View(check);
 
             //GameRules gamerules = new GameRules();

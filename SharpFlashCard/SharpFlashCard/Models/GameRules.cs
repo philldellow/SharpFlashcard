@@ -17,23 +17,31 @@ namespace SharpFlashCard.Models
         public string cardAnswer;
         public string question;
         FlashCards card;
-        
+        private readonly String _response = "";
 
-        public GameRules(string A)
+        public GameRules(string A, string CA)
         {
             answer = A;
+            cardAnswer = CA;
+            if (answer != "")
+            {
+                if (answer.ToLower() == cardAnswer.ToLower())
+                { _response = "Good Job"; }
+                else { _response = "Oops you got it Wrong"; }
+            }
         }
 
-        public string Response()
+        public String Response
         {
-            return answer == cardAnswer ? "Correct!!!" : "You got it Wrong :( ";
-        }
+            get {return _response; }
+         }
 
-        public void Card()
+        public FlashCards Card()
         {
             card = getQA.RandomCardPick();
             cardAnswer = card.Answer;
             question = card.Question;
+            return card;
         }
 
     }
